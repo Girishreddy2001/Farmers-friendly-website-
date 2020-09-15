@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subscribe page </title>
+<link href="subscribe.css" rel="stylesheet" type="text/css">
+<script>  
+function validateemail()  
+{  
+var x=document.form.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}
+function validate(){  
+var num=document.form.num.value;  
+if (isNaN(num)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+}else{  
+  return true;  
+  }  
+}                                     
+</script>  
+
+</head>
+<body>
+<div class="login-page">
+<div class="form">
+<form name="form"  method="post" action="#" onsubmit="return validateemail();"> 
+<form name="form" onsubmit="return validate()" >   
+<input type="text" Placeholder="email id" name ="email">
+<input type="number" Placeholder="Phone number" name="num" >
+<input type ="submit" value="Subscribe">
+</form> 
+</form>
+</div>	
+</div>
+</body>
